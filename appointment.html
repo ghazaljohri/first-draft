@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Appointment — AZELÉ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav id="site-nav" class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">AZELÉ</a>
+      <ul class="nav-links">
+        <li><a href="collection.html">The Collection</a></li>
+        <li><a href="bespoke.html">The Bespoke</a></li>
+        <li><a href="index.html#process">The Process</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="appointment.html">Appointment</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HEAD ============ -->
+  <section class="page-head">
+    <div class="page-head-inner">
+      <h1>Begin Your AZELÉ Experience.</h1>
+      <p>Whether you're exploring a bespoke creation or would simply like to speak with us about an idea, we'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <!-- ============ APPOINTMENT FORMATS ============ -->
+  <section class="detail">
+    <div class="detail-grid detail-grid--two">
+      <div class="detail-block">
+        <span class="detail-num">01</span>
+        <h3>Virtual Consultation</h3>
+        <p>Connect with our team from wherever you are.</p>
+      </div>
+      <div class="detail-block">
+        <span class="detail-num">02</span>
+        <h3>In-Person Appointment</h3>
+        <p>Meet with us personally to discuss your vision and begin the creative process.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ APPOINTMENT FORM ============ -->
+  <!-- No backend wired up yet — connect this form to the real booking flow later. -->
+  <section>
+    <form class="appointment-form">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="name" required />
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required />
+      </div>
+      <div class="form-row">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" />
+      </div>
+      <div class="form-row">
+        <label for="format">Preferred appointment format</label>
+        <select id="format" name="format">
+          <option value="virtual">Virtual Consultation</option>
+          <option value="in-person">In-Person Appointment</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="piece">Tell us about your piece</label>
+        <textarea id="piece" name="piece"></textarea>
+      </div>
+      <div class="form-row">
+        <label for="date">Preferred date</label>
+        <input type="date" id="date" name="date" />
+      </div>
+      <button type="submit" class="btn">Request an Appointment</button>
+    </form>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-logo">AZELÉ</p>
+      <p class="footer-tag">An expression of you.</p>
+      <ul class="footer-links">
+        <li><a href="collection.html">The Collection</a></li>
+        <li><a href="bespoke.html">The Bespoke</a></li>
+        <li><a href="index.html#process">The Process</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="appointment.html">Appointment</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 AZELÉ. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>
