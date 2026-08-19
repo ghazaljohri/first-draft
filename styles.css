@@ -419,6 +419,51 @@ ul{ list-style: none; }
   margin-bottom: 36px;
 }
 
+/* ---------------- COLLECTION IMAGE REVEAL (scoped additions only; .offer/.offer-inner/.offer-eyebrow rules above are untouched and still govern the Bespoke teaser) ---------------- */
+.offer--collection .offer-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.offer--collection .offer-inner{
+  margin: 0;
+  max-width: 420px;
+  flex: 1 1 380px;
+}
+
+.offer-media{
+  position: relative;
+  flex: 1 1 420px;
+  max-width: 460px;
+  aspect-ratio: 1376 / 768;
+  overflow: hidden;
+}
+
+.offer-media img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.offer-media-reveal{
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(circle 140px at var(--mx, 50%) var(--my, 50%), #000 45%, transparent 75%);
+  mask-image: radial-gradient(circle 140px at var(--mx, 50%) var(--my, 50%), #000 45%, transparent 75%);
+}
+
+.offer-media.is-active .offer-media-reveal{
+  opacity: 1;
+}
+
 /* ---------------- PROCESS ---------------- */
 .process{
   padding: 160px 40px;
@@ -777,6 +822,9 @@ ul{ list-style: none; }
   .process-step{ grid-template-columns: 1fr; gap: 10px; }
   .piece-grid{ grid-template-columns: 1fr; gap: 48px; }
   .page-head{ padding: 160px 24px 80px; }
+  .offer--collection .offer-row{ flex-direction: column; gap: 40px; }
+  .offer--collection .offer-inner{ max-width: none; }
+  .offer-media{ max-width: none; width: 100%; }
 }
 
 /* ---------------- REDUCED MOTION ---------------- */
